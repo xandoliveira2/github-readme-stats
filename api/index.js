@@ -40,7 +40,7 @@ export default async (req, res) => {
     show,
   } = req.query;
   res.setHeader("Content-Type", "image/svg+xml");
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  
   if (blacklist.includes(username)) {
     return res.send(
       renderError("Something went wrong", "This username is blacklisted", {
